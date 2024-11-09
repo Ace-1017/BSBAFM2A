@@ -7,150 +7,168 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Reset and basic styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-body {
-    line-height: 1.6;
-}
+        body {
+            line-height: 1.6;
+        }
 
-/* Header */
-.header {
-    background-color: #4169E1;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
+        /* Header */
+        .header {
+            background-color: #4169E1;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
 
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-}
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
 
-.nav-links li {
-    margin: 0 15px;
-}
+        .nav-links li {
+            margin: 0 15px;
+        }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-.nav-links a:hover {
-    color: #ffcc00;
-}
+        .nav-links a:hover {
+            color: #ffcc00;
+        }
 
-/* Hero Section */
-.hero-section {
-    background-image: url('https://via.placeholder.com/1600x900');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+        /* Hero Section */
+        .hero-section {
+            background-image: url('actual-campus-image.jpg'); /* Replace with real image */
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
 
-.hero-text h1 {
-    font-size: 2.5em;
-}
+        .hero-text h1 {
+            font-size: 2.5em;
+        }
 
-.hero-text p {
-    font-size: 1.2em;
-}
+        .hero-text p {
+            font-size: 1.2em;
+        }
 
-.hero-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #ffcc00;
-    color: #4169E1;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
+        .hero-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ffcc00;
+            color: #4169E1;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
 
-.hero-btn:hover {
-    background-color: #f4a700;
-}
+        .hero-btn:hover {
+            background-color: #f4a700;
+        }
 
-/* About, Programs, and News Sections */
-section {
-    padding: 80px 20px;
-    text-align: center;
-}
+        /* About, Programs, and News Sections */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
 
-.about-section, .news-section, .contact-section {
-    background-color: #f4f4f4;
-}
+        .about-section, .news-section, .contact-section {
+            background-color: #f4f4f4;
+        }
 
-.programs-section {
-    background-color: white;
-}
+        .programs-section {
+            background-color: white;
+        }
 
-h2 {
-    color: #4169E1;
-    margin-bottom: 20px;
-}
+        h2 {
+            color: #4169E1;
+            margin-bottom: 20px;
+        }
 
-.programs {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+        .programs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
 
-.program {
-    background-color: #4169E1;
-    color: white;
-    padding: 20px;
-    width: 200px;
-    border-radius: 8px;
-    transition: transform 0.3s, background-color 0.3s;
-}
+        .program {
+            background-color: #4169E1;
+            color: white;
+            padding: 20px;
+            width: 200px;
+            border-radius: 8px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
 
-.program:hover {
-    transform: scale(1.05);
-    background-color: #374d96;
-}
+        .program:hover {
+            transform: scale(1.05);
+            background-color: #374d96;
+        }
 
-.program h3 {
-    margin-bottom: 10px;
-}
+        .program h3 {
+            margin-bottom: 10px;
+        }
 
-.contact-section a {
-    color: #4169E1;
-    text-decoration: none;
-}
+        .contact-section a {
+            color: #4169E1;
+            text-decoration: none;
+        }
 
-.contact-section a:hover {
-    color: #ffcc00;
-}
+        .contact-section a:hover {
+            color: #ffcc00;
+        }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .programs {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+        /* Footer */
+        footer {
+            background-color: #4169E1;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #ffcc00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .programs {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -209,6 +227,12 @@ h2 {
         <h2>Contact Us</h2>
         <p>For inquiries, please email us at <a href="mailto:info@hccc.edu.ph">info@hccc.edu.ph</a></p>
     </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Holy Cross College of Calinan | All rights reserved</p>
+        <p>Follow us on <a href="https://facebook.com/HolyCrossCalinan">Facebook</a> | <a href="https://instagram.com/HolyCrossCalinan">Instagram</a></p>
+    </footer>
 
 </body>
 </html>
