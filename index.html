@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Cross College of Calinan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333333;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+            font-weight: bold;
+        }
+
+        body, p {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+        }
+
+        /* Remove the blue color and underline from all links */
+        a {
+            color: inherit; /* Inherit the color from the surrounding text */
+            text-decoration: none; /* Remove the underline */
+        }
+
+        /* Optionally, change color when hovering over the links */
+        a:hover {
+            color: #555; /* Or any color you prefer */
+            text-decoration: none; /* Keep it un-underline on hover */
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: royalblue;
+            border-bottom: 2px solid #fff;
+        }
+        .navbar-brand {
+            color: white;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        .navbar-nav .nav-link {
+            color: white;
+            margin-right: 15px;
+            font-weight: 500;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #f0f0f0;
+        }
+        .nav-link:hover {
+    color: royalblue;  /* Add color change effect */
+    text-decoration: underline;
+}
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            background-color: royalblue;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero-section h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+        .hero-section p {
+            font-size: 1.2em;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        /*Hero Carousel */
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Service Section */
+        .services-section {
+            padding: 50px 20px;
+            text-align: center;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        .service-card {
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(65, 105, 225);
+            color: white; /* Add this line */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Vision, Mission, and Core Values Section */
+        .vision-mission-section {
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        .vision-mission-section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        .vision-mission-item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: rgba(65, 105, 225, 1);
+            color: white; /* Add this line */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Align text to the left */
+            margin-bottom: 30px;
+        }
+
+        .vision-mission-item h3 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        /* General Business Admin Section Styling */
+#business-admin {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    color: #ffffff;
+    margin-bottom: 10px; /* Adds space between business admin and course cards */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Styling for Business Summary Card */
+#business-summary {
+    background-color: royalblue;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Course Cards Layout */
+#course-cards {
+    display: flex;
+    gap: 50px; /* Reduced gap between the cards */
+    justify-content: center; /* This centers the cards horizontally */
+    flex-wrap: wrap;
+    padding: 20px 0; /* Adds padding around the course cards */
+}
+
+/* Individual Course Card Styling */
+.course-card {
+    width: 370px; /* Fixed width for consistency */
+    height: 430px; /* Adjusted height */
+    background-color: royalblue;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 20px; /* Adds spacing between rows */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.course-card img {
+    width: 100%;
+    height: 50%; /* Top half for image */
+    object-fit: cover;
+}
+
+.course-card h3 {
+    margin: 10px 0 10px;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.course-card p {
+    color: #e0e0e0;
+    padding: 0 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Additional unique styling for specific course cards (if necessary) */
+#hr-course {
+    background-color: #486352;
+}
+
+#marketing-course {
+    background-color: #041A2F;
+}
+
+#finance-course {
+    background-color: #af0202;
+}
+
+/* Hover Effect for Course Card */
+.course-card:hover {
+    transform: scale(1.05); /* Slightly increase the size */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow size */
+    background-color: #4a7cbf; /* Slightly change the background color */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+        /* Footer */
+        .footer {
+            background-color: royalblue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://github.com/Ace-1017/BSBAFM2A/blob/main/Picsart_24-11-10_01-32-07-629.png?raw=true" alt="Holy Cross College of Calinan, Inc." height="40" style="margin-right: 10px;">
+                Holy Cross College of Calinan, Inc.
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://hccc.edu.ph/about-hccc/" target="_blank">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#business-admin">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://ace-1017.github.io/hcccevents/">Events</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>WELCOME TO HOLY CROSS COLLEGE OF CALINAN</h1>
+        <p>WE ARE PROVIDING QUALITY EDUCATION FOR MORE THAN 70 YEARS</p>
+    </section>
+
+    <!--Hero Image Carousel -->
+    <section id="about" class="carousel-section">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/196889587_2963706500536998_510005837021016094_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFYzLb3yJeAOjXmYHIPxFvUzWMAInKoh__NYwAicqiH_97UuOg-5KHRseCalk4I2xSodQUNVg_8nlQ3faRfO15z&_nc_ohc=N4hCGdlO5LoQ7kNvgG2ENY_&_nc_zt=23&_nc_ht=scontent.fmnl13-2.fna&_nc_gid=AaFdVtG2pwfZNtbvsiCOnxv&oh=00_AYBFpqme4_ggjpHsi494UAS9fWk5x_0sAklvrgaOOh-gnQ&oe=67582B23" class="d-block w-100" alt="Campus Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-6/461926745_3852430071664632_3888758231722693194_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeEC3RYKKGzhYyWLxulC8vqT1KWMTTTayBbUpYxNNNrIFp5NOfqv68jWUcVucaMinkixev4v8oYQiiSOc6k6zmZG&_nc_ohc=DtLWtaYsHXsQ7kNvgHDvY5e&_nc_zt=23&_nc_ht=scontent.fcgy1-1.fna&_nc_gid=AeqT8f7aqvxIZn9aDM4JbuR&oh=00_AYAZZibXA-FW-v-wUu_D8b5i-uqQTUjJGqQbSW-uk70ckQ&oe=67357A51" class="d-block w-100" alt="Campus Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-6/301903710_443029381179214_6073872703075643389_n.png?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeFD75duJ_v9UXKW0smWAbk0uh1Bw2YJYdW6HUHDZglh1Z4b_MJoct7yxkwRACtgmGW4PwvlIxFk8lUqza5584E7&_nc_ohc=RXRY2Du266gQ7kNvgEaSk3a&_nc_zt=23&_nc_ht=scontent.fcgy1-1.fna&_nc_gid=AqNTBe5zZ2g1B2DLV-ZUtGL&oh=00_AYDRIOnGhcgQqSgnAfzmkUHJHeReZH_wq8flESJbsOcoog&oe=67355F79" class="d-block w-100" alt="Campus Image 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>PROGRAMS</h2>
+            <div class="row mt-5">
+                <!-- Primary Education -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3>Primary Education</h3>
+                        <p>Building a strong foundation for young minds to grow.</p>
+                    </div>
+                </div>
+                <!-- Secondary Education -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3>Secondary Education</h3>
+                        <p>Preparing students for a future of success and excellence.</p>
+                    </div>
+                </div>
+                <!-- Tertiary Education -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <h3>Tertiary Education</h3>
+                        <p>Equipping future leaders with the knowledge and skills they need.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision, Mission, and Core Values Section -->
+    <section id="vision-mission" class="vision-mission-section">
+        <div class="container">
+            <h2>Our Vision, Mission & Core Values</h2>
+            <!-- Vision -->
+            <div class="vision-mission-item">
+                <h3>Vision</h3>
+                <p>We, a family of evangelizers, inspired by Marie Rivier and her virtues, envision ourselves as dynamic catalysts who are Christ-centered, Marian in spirituality, professionally proficient in the context of global standards of excellence, socially responsive and dedicated to selflessly serve God, the Church and the broader society.</p>
+            </div>
+            <!-- Mission -->
+            <div class="vision-mission-item">
+                <h3>Mission</h3>
+                <p>We are a pioneering Catholic educational institution administered by the Presentation of Mary Sisters: </p>
+                <ul>
+                    <li>We provide excellent quality formation, education, training and development to the youth and other sectors to develop competence and character and lifelong learning skills.</li>
+                    <li>We develop mature Christians imbued with Marie Rivier’s virtues of faith, prayer, compassion, love and zeal to bear witness to Christ in their daily living.</li>
+                    <li>We adhere to state-of-the-art pedagogy and relevant technology to enable our stakeholders meet global standards of excellence. Individually and collaboratively, we commit to achieve these.</li>
+                </ul>
+            </div>
+
+            <!-- Core Values -->
+            <div class="vision-mission-item">
+                <h3>Core Values</h3>
+                <ul>
+                    <li>Apostleship, Faith, and Prayer</li>
+                    <li>Compassion, Love and Concern for</li>
+                    <li>Holistic Growth and Development</li>
+                    <li>Involvemnt, Zeal and Independence / Institutional Cooperation Social Advocacy</li>
+                    <li>Excellence, Competence and Quality</li>
+                    <li>Viability of Institutional Operations</li>
+                    <li>Exploration, Creativity and Innovation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+   <!-- Business Admin Section -->
+<div id="business-admin" class="business-admin-section">
+    <div id="business-summary" class="summary-card">
+        <h2>College Department - BSBA Majors</h2>
+        <p>Learn about our courses designed to prepare you for success in HR, Marketing, and Finance.</p>
+    </div>
+</div>
+
+<!-- Separate Course Cards Section -->
+<div id="course-cards" class="course-cards">
+    <div id="hr-course" class="course-card">
+        <img id="hr-img" src="https://github.com/Ace-1017/BSBAFM2A/blob/main/20241110_195150_0002.png?raw=true" alt="HR Marketing Image 1">
+        <h3>Marketing Management</h3>
+        <p>Focuses on marketing principles and practices in business. This program gives students a thorough understanding of marketing strategies.</p>
+    </div>
+    
+    <div id="marketing-course" class="course-card">
+        <img id="marketing-img" src="https://github.com/Ace-1017/BSBAFM2A/blob/main/20241110_195150_0000.png?raw=true" alt="Marketing Image 1">
+        <h3>Human Resource Management</h3>
+        <p>Focuses on developing the knowledge and skills needed to effectively manage human resources within an organization.</p>
+    </div>
+    
+    <div id="finance-course" class="course-card">
+        <img id="finance-img" src="https://github.com/Ace-1017/BSBAFM2A/blob/main/20241110_195150_0001.png?raw=true" alt="Finance Image 1">
+        <h3>Financial Management</h3>
+        <p>Focuses on expanding students' understanding of financial concepts and practices in the context of business organizations.</p>
+    </div>
+</div>
+  
+    <!-- Footer Section -->
+    <footer class="footer" id="contact">
+        <p>&copy; 2024 Holy Cross College of Calinan. All rights reserved.</p>
+        <p>Email: <a href="mailto:holycrosscollegeofcalinan@yahoo.com">holycrosscollegeofcalinan@yahoo.com</a> | Mobile: <a href="tel:+639498469372">+639498469372</a> | Fax: 063 82 295-0145</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Array of images for HR, Marketing, and Finance
+        const hrImages = [
+        "https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/460323015_1013994797403061_9020066198181877194_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHS33VWzpe9ycCXmZrO7xUqbxOEz7gNysFvE4TPuA3KweDDMXWVeGPIK-K7LhMY1BNLuT7ZUfq1nq8lUZdVWM92&_nc_ohc=OhBv1IeMi_UQ7kNvgETDtVo&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&_nc_gid=A5MfNGl9RrVjfgLfXqYHAiI&oh=00_AYASmjGX2J97bpijmtHelQwPBI1UQ9T7vsYRHDQHkx9iag&oe=67367B33",
+        "https://github.com/Ace-1017/BSBAFM2A/blob/main/20241110_195150_0002.png?raw=true", // Replace with the actual URL
+        "https://scontent.fmnl4-7.fna.fbcdn.net/v/t39.30808-6/452630095_1059018576233299_6282038134430703696_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeE_KFsYt-mTgE6N8oRdUbqwhthrbb9NUo2G2Gttv01SjfFodRvvfJh2oArub35muadrMXzQnxsLzSalstUFMGWM&_nc_ohc=OQmiOdpVgs8Q7kNvgEC-mSC&_nc_zt=23&_nc_ht=scontent.fmnl4-7.fna&_nc_gid=AmbyMvpMYH1BOcXVu1_9mW7&oh=00_AYBMxwtgsFlTN0rse_6xbvPqQnUiU1DTNADMOnIhb45yJA&oe=67367607",
+        ];
+        const marketingImages = [
+            "https://scontent.fmnl4-6.fna.fbcdn.net/v/t39.30808-6/455610704_945344704304566_4067908108428203900_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHbCyOjzmFa0-I8JtRBmQU9R7VYS0H7zJVHtVhLQfvMlS4V03XUr7hEb5Cf9eeT6ownQLjpxdB2VPPihc3U_hrS&_nc_ohc=PFBKNxFu7x0Q7kNvgH-2H2x&_nc_zt=23&_nc_ht=scontent.fmnl4-6.fna&_nc_gid=AwcuEkkSDWskgenEmxJnkLc&oh=00_AYCf-RwiyVjHUgiVLsLwpSg0-IhIyyPjjanKMqK47Nd2Sw&oe=6736830A",
+            "https://github.com/Ace-1017/BSBAFM2A/blob/main/20241110_195150_0000.png?raw=true", // Replace with the actual URL
+            "https://scontent.fmnl4-4.fna.fbcdn.net/v/t39.30808-6/452675167_1059010076234149_6836694874386731671_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGaZa3v9A7Ss14XKa7jbqnCSThsjzVBRvBJOGyPNUFG8LuP-Z5gudRmhDAW8zMYjjbJjLr93ZEalbdbXTzJAvt_&_nc_ohc=3e9-81izjbgQ7kNvgE1LFxd&_nc_zt=23&_nc_ht=scontent.fmnl4-4.fna&_nc_gid=Aht7EkUwjh0dMbUhPbUYbE7&oh=00_AYANV8xmMXik4m3QDda8NvCro0fSx-Keyo3w0IP9kmccog&oe=67366F3D"   // Replace with the actual URL
+        ];
+        const financeImages = [
+            "https://scontent.fmnl4-6.fna.fbcdn.net/v/t39.30808-6/239877175_387650246376799_3264082984563624574_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeE7ucsBn_8ABKCB0FqzddRE1sB8w48vZB7WwHzDjy9kHkoJjsMkNFc3gnlMU7izqE40VHWCocI6D4J2Zy8FCFX-&_nc_ohc=3C-TeV3XpFEQ7kNvgEYGYSC&_nc_zt=23&_nc_ht=scontent.fmnl4-6.fna&_nc_gid=ANKlnpaiXNQRvl4oyHbWwe6&oh=00_AYCEMdRhiAt9JW4l21LJdK7ErACj5RfruxQ8DP_fjtfhAA&oe=6736796F",
+            "https://github.com/Ace-1017/BSBAFM2A/blob/main/20241110_195150_0001.png?raw=true", // Replace with the actual URL
+            "https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-6/452426044_1059021449566345_1466782103894041922_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeG2y0JALbB7pp0TvgDOCTQqmCS9nhwJnsCYJL2eHAmewEeYO55yrskh27-stnIRRRZY-IilKb7Bv9JfTmhZuZFJ&_nc_ohc=NgeBek_xPk8Q7kNvgFlysRw&_nc_zt=23&_nc_ht=scontent.fmnl4-2.fna&_nc_gid=Ap__q5QzaZjrlgCEvDC5Xtz&oh=00_AYCeelm4MLKLACw53Ww8uW-KkQR_nXwpNqR8jFSY5YFlAg&oe=67368220"   // Replace with the actual URL
+        ];
+    
+        // Select the image elements by their IDs
+        const hrImgElement = document.getElementById('hr-img');
+        const marketingImgElement = document.getElementById('marketing-img');
+        const financeImgElement = document.getElementById('finance-img');
+    
+        // Function to change images every 8 seconds
+        function changeImages() {
+            // Change HR Image
+            let hrIndex = 0;
+            setInterval(() => {
+                hrIndex = (hrIndex + 1) % hrImages.length;  // Cycle through images
+                hrImgElement.src = hrImages[hrIndex];
+            }, 6000); // Change every 6 seconds
+    
+            // Change Marketing Image
+            let marketingIndex = 0;
+            setInterval(() => {
+                marketingIndex = (marketingIndex + 1) % marketingImages.length;  // Cycle through images
+                marketingImgElement.src = marketingImages[marketingIndex];
+            }, 6000); // Change every 6 seconds
+    
+            // Change Finance Image
+            let financeIndex = 0;
+            setInterval(() => {
+                financeIndex = (financeIndex + 1) % financeImages.length;  // Cycle through images
+                financeImgElement.src = financeImages[financeIndex];
+            }, 6000); // Change every 6 seconds
+        }
+    
+        // Run the function to change images
+        changeImages();
+    </script>
+    
+</body>
+</html>
